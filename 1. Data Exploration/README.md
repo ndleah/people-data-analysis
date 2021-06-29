@@ -18,7 +18,7 @@
 Before diving straight into solution mode for the business requirements, I need to take a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
 
 <p align="center">
-<img src="IMG/EDR.png" width=100% height=100%>
+<img src="(https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/EDR.png)" width=100% height=100%>
 </p>
 
 <br /> 

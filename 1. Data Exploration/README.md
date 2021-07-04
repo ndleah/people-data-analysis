@@ -5,14 +5,10 @@
 
 # Data Overview - Data Exploration
 
-<p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/data-exploration.gif" width=60% height=60%>
-</p>
-
 ## Table of contents
-<!--ts-->
-
-
+* [Entity Diagram Relationship](#entity-diagram-relationship)
+* [Dataset](#dataset) 
+* [Next Steps](#next-steps)
 ---
 ## Entity Diagram Relationship
 Before diving straight into solution mode for the business requirements, I need to take a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
@@ -28,25 +24,10 @@ Before diving straight into solution mode for the business requirements, I need 
 This case study provided me with 6 key datasets:
 
 * ### **```Employee Table```**
-```sql
-SELECT 
-  id,
-  COUNT(id) AS id_count
-FROM employees.employee
-GROUP BY id
-ORDER BY id_count DESC
-LIMIT 5;
-```
 
-**Result:**
-|id   |id_count|
-|-----|--------|
-|10002|1       |
-|10003|1       |
-|10004|1       |
-|10005|1       |
-|10001|1       |
+With the **```employee```** table, we can see that there is a unique row of personal information for each employee in our database and there is primary key on the **```id```** column. 
 
+Moreover, there is the issue with the dates where the year was wrongly input 18 years behind what it should be.
 
 ```sql
 SELECT * FROM employees.employee
@@ -70,6 +51,9 @@ LIMIT 10;
 ---
 
 * ### **```Title```**
+
+Our second table is the **```employees.title```** table which contains the **```employee_id```** which we can join back to our **```employees.employee```** table.
+
 ``` sql
 SELECT 
   employee_id,
@@ -89,6 +73,8 @@ LIMIT 5;
 |10258      |3       |
 |10571      |3       |
 
+After inspecting the data - we notice that there is in fact a **many-to-one relationship** between the **```employees.title```** and **```employees.employee```** tables.
+
 
 ```sql
 SELECT * FROM employees.title
@@ -101,6 +87,10 @@ ORDER BY  from_date;
 |-----------|-----|------------------------|------------------------|
 |10005      |Staff|1989-09-12T00:00:00.000Z|1996-09-12T00:00:00.000Z|
 |10005      |Senior Staff|1996-09-12T00:00:00.000Z|9999-01-01T00:00:00.000Z|
+
+For our example, **```employee_id```** = 10005 Kyoichi Maliniak’s title was originally “Staff” from **```1989-09-12```** to **```1996-09-12```** when he was then promoted to “Senior Staff” which is his current position until the “arbitrary” end date of **```9999-01-01```** in our dataset.
+
+Also, there is the issue with the dates where the year was wrongly input which is similar with the **```employee```** table above.
 
 ---
 
@@ -124,7 +114,9 @@ LIMIT 5;
 |10009      |18      |
 |10372      |18      |
 
+The third table is the all-important employees.salary table - it also has a similar relationship with the unique **```employees.employee```** table in that there are **many-to-one** or **one-to-many records** for each employee and their salary amounts over time.
 
+Let’s also continue to check **```employee_id```** 10005’s records for this table ordered by the from_date ascending from earliest to latest to checkout his salary growth over the years with the company:
 ```sql
 SELECT * FROM employees.salary
 WHERE employee_id = 10005;
@@ -147,9 +139,14 @@ WHERE employee_id = 10005;
 |10005      |91453 |2000-09-09T00:00:00.000Z|2001-09-09T00:00:00.000Z|
 |10005      |94692 |2001-09-09T00:00:00.000Z|9999-01-01T00:00:00.000Z|
 
+We found out that the same **```from_date```** and **```to_date```** columns exist in this table, along with it’s arbitrary end date of **```9999-01-01```** which we will need to deal with later.
+
 ---
 
 * ### **```department_employee```**
+
+We now take a look at the **```employees.department_employee```** table which captures information for which department each employee belongs to throughout their career with our company.
+
 ```sql
 SELECT
   employee_id,
@@ -169,6 +166,8 @@ LIMIT 5;
 |10018      |2                 |
 |10050      |2                 |
 
+In the same vain as the previous tables - we have the same slow changing dimension (SCD) style data design with a **many-to-one relationship** with the base **```employees.employee```** table
+
 ```sql
 SELECT * FROM employees.department_employee
 WHERE employee_id = 10029
@@ -181,9 +180,16 @@ LIMIT 5;
 |10029      |d004         |1991-09-18T00:00:00.000Z|1999-07-08T00:00:00.000Z|
 |10029      |d006         |1999-07-08T00:00:00.000Z|9999-01-01T00:00:00.000Z|
 
+We can see that they’ve changed departments from **```d004```** to **```d006```** in **```1999-07-08```** (well, we’ll add 18 years to this date later!)
+
+This **```department_id```** value is all good and well though - but wouldn’t it be more useful if we were to actually use the department name…
+
 ---
 
 * ### **```department_manager```**
+
+Before we cover the actual department name - let’s also take a look at the department manager too, this time still with the random looking **```department_id```** values!
+
 ```sql
 SELECT * FROM employees.department_manager
 ORDER BY employee_id
@@ -199,6 +205,9 @@ LIMIT 5;
 |110114     |d002         |1989-12-17T00:00:00.000Z|9999-01-01T00:00:00.000Z|
 |110183     |d003         |1985-01-01T00:00:00.000Z|1992-03-21T00:00:00.000Z|
 
+In the same way that the **```employees.department_employee```** table shows the relationship between employees and their respective departments throughout time - the employees.**```department_manager```** table shows the **```employee_id```** of the manager of each department throughout time.
+
+To inspect this dataset - how about we take a look at that **```department_id```** = 'd004' record:
 
 ```sql
 SELECT *
@@ -215,9 +224,14 @@ ORDER BY from_date;
 |110386     |d004         |1992-08-02T00:00:00.000Z|1996-08-30T00:00:00.000Z|
 |110420     |d004         |1996-08-30T00:00:00.000Z|9999-01-01T00:00:00.000Z|
 
+As transparent from the table, we know the current and previous managers of **```department_id```** d004 - well at least we know their **```employee_id```**, we’ll need to join back onto the **```employees.employee```** table to grab out more of their personal details.
+
 ---
 
 * ### **```Department table```**
+
+The **```employees.department```** table is just like the employees.employee table where there is a 1:1 unique relationship between the id or department_id and the **```dept_name```**.
+
 ```sql
 SELECT *
 FROM employees.department
@@ -240,11 +254,9 @@ ORDER BY id;
 
 ## Next Steps
 
-### *Thanks for reading and scrolling down until this point. I truly aprreciated your patience!* :heart:
+This completes the quick data exploration of all the tables we will be using for this case study!
 
-<br /> 
-
-### **In the second stage of this project, I will perfom some table joins for retrieving and transform data into meaning insights for our email marketing campaign.**
+In the next tutorial we will start tackling our problem - first we will remedy our young intern’s data entry mistake and explore how we can create some reusable data assets to store this case study’s results to scale out our solution.
 
 <br /> 
 

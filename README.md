@@ -102,10 +102,18 @@ Hooray! Finally, this is what out final input looks like:
 <p align="center">
 <img src="https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/Current_Snapshot_Reporting.png" width=50% height=50%>
 
+<p align="center">
+    Source: Serious SQL
+</p>
+
 ### ✅ **Employee Deep Dive**
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/Historic_Employee.png" width=50% height=50%>
+
+<p align="center">
+    Source: Serious SQL
+</p>
 
 # ✨ Contribution
 

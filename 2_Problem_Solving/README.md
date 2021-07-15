@@ -3,7 +3,7 @@
 
 # **[SERIOUS SQL: PEOPLE ANALYTICS CASE STUDY](https://github.com/nduongthucanh/HR-Analytics-Using-SQL)**
 
-# Data Overview
+# Problem Solving
 
 ## 📕 Table of contents
 * ✅ [Solution](#solution)

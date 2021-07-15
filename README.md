@@ -86,8 +86,6 @@ A historic data asset is also required by **HR Analytica** so their People Analy
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration) or
 [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration)
 
- <br /> 
-
 
 # 🚀 Solutions
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving) or
@@ -107,7 +105,7 @@ Hooray! Finally, this is what out final input looks like:
 ### ✅ **Employee Deep Dive**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/Historic_Employee.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/Historic_Employee.png" width=50% height=50%>
 
 # ✨ Contribution
 

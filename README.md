@@ -1,11 +1,9 @@
 ![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
-[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/nduongthucanh)
-[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/nduongthucanh?tab=repositories)
+[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
+[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 
-
-# **[SERIOUS SQL: PEOPLE ANALYTICS CASE STUDY](https://github.com/nduongthucanh/HR-Analytics-Using-SQL)**
-
+# **[SERIOUS SQL: PEOPLE ANALYTICS CASE STUDY](https://github.com/ndleah/HR-Analytics-Using-SQL)**
 
 <p align="center">
 <img src="https://media-exp3.licdn.com/dms/image/C5612AQGs2Sso8x_GVg/article-cover_image-shrink_600_2000/0/1571900562817?e=1631145600&v=beta&t=Y3uvsOPCROaX99Wmqw3Qg-naCYHei0BqqIk7rH80tyc" width=100% height=100%>
@@ -24,7 +22,6 @@
  <br /> 
 
 
-
 # 📕 Table of contents
 <!--ts-->
    * 🛠️ [Requirements](#️-requirements)
@@ -33,9 +30,7 @@
    * 🧙‍♂️ [Result](#️-result)
 <!--te-->
 
-
  <br /> 
-
 
 # 🛠️ Requirements
 
@@ -80,17 +75,14 @@ A historic data asset is also required by **HR Analytica** so their People Analy
 * Calculate the previous position and department history in months with start and end dates
 * Compare an employee’s current salary, total company tenure, department, position and gender to the average benchmarks for their current position
 
-
 # 📂 Data Overview
 
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration) or
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration)
-
+## View the entire solution for this part [**here**](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration) or
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration)
 
 # 🚀 Solutions
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving) or
-[![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving)
-
+## View the entire solution for this part [**here**](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving)
 
 # 🧙‍♂️ Result
 
@@ -100,7 +92,7 @@ Hooray! Finally, this is what out final input looks like:
 ### ✅ **People Analytics Dashboard**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/Current_Snapshot_Reporting.png" width=50% height=50%>
+<img src="https://github.com/ndleah/HR-Analytics-Using-SQL/blob/main/IMG/Current_Snapshot_Reporting.png" width=50% height=50%>
 
 <p align="center">
     Source: Serious SQL
@@ -109,7 +101,7 @@ Hooray! Finally, this is what out final input looks like:
 ### ✅ **Employee Deep Dive**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/HR-Analytics-Using-SQL/blob/main/IMG/Historic_Employee.png" width=50% height=50%>
+<img src="https://github.com/ndleah/HR-Analytics-Using-SQL/blob/main/IMG/Historic_Employee.png" width=50% height=50%>
 
 <p align="center">
     Source: Serious SQL
@@ -127,3 +119,5 @@ Give a ⭐️ if you like this project!
 ___________________________________
 
 <p>&copy; 2021 Leah Nguyen</p>
+
+

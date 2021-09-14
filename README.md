@@ -3,23 +3,17 @@
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 
-# **[SERIOUS SQL: PEOPLE ANALYTICS CASE STUDY](https://github.com/ndleah/HR-Analytics-Using-SQL)**
-
-<p align="center">
-<img src="https://media-exp3.licdn.com/dms/image/C5612AQGs2Sso8x_GVg/article-cover_image-shrink_600_2000/0/1571900562817?e=1631145600&v=beta&t=Y3uvsOPCROaX99Wmqw3Qg-naCYHei0BqqIk7rH80tyc" width=100% height=100%>
-
-> This case study is contained within the [Serious SQL](https://www.datawithdanny.com) by [Danny Ma](https://www.linkedin.com/in/datawithdanny/).
+# People Data Analytics <img src=" https://i.gifer.com/embedded/download/3aQl.gif" width ="120">
 
 <p align="center">
   <img src="https://forthebadge.com/images/badges/built-with-love.svg">
-  <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg">
-</p>
-
-<p align="center">
   <img src="https://forthebadge.com/images/badges/check-it-out.svg">
 </p>
 
- <br /> 
+> This case study is contained within the [Serious SQL](https://www.datawithdanny.com) by [Danny Ma](https://www.linkedin.com/in/datawithdanny/).
+
+
+
 
 
 # 📕 Table of contents
@@ -41,6 +35,12 @@ A current snapshot of the information is required to power **HR Analytica**’s 
 The following data requirements is as follows:
 
 ### **1. Dashboard Data Components**
+
+<details>
+<summary>
+Click to view
+</summary>
+
 🌟 **Company Level Insights**
 
 * Total number of employees
@@ -65,9 +65,16 @@ The following data requirements is as follows:
 
 A historic data asset is also required by **HR Analytica** so their People Analytics team can perform deep dives into a specific employee’s history. This analysis is used for decision making when it comes to pay rises and promotions.
 
----
+</details>
 
 ### **2. Deep Dive Data Components**
+
+<details>
+<summary>
+Click to view
+</summary>
+
+
 🌟 **Individual Employee Deep Dive**
 
 * See all the various employment history ordered by effective date including salary, department, manager and title changes
@@ -75,13 +82,14 @@ A historic data asset is also required by **HR Analytica** so their People Analy
 * Calculate the previous position and department history in months with start and end dates
 * Compare an employee’s current salary, total company tenure, department, position and gender to the average benchmarks for their current position
 
+</details>
+
 # 📂 Data Overview
 
-## View the entire solution for this part [**here**](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration) or
 [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/1_Data_Exploration)
 
 # 🚀 Solutions
-## View the entire solution for this part [**here**](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving) or
+
 [![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-A80101?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/HR-Analytics-Using-SQL/tree/main/2_Problem_Solving)
 
 # 🧙‍♂️ Result

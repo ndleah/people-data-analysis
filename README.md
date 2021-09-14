@@ -3,7 +3,7 @@
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 
-# People Data Analytics <img src=" https://i.gifer.com/embedded/download/3aQl.gif" width ="120">
+# People Data Analytics <img src="https://i.gifer.com/embedded/download/3aQl.gif" align="right" width="120" />
 
 <p align="center">
   <img src="https://forthebadge.com/images/badges/built-with-love.svg">
